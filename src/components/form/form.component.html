@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Conversor</h1>
+  <form [formGroup]="form" class="form" (ngSubmit)="Converte()">
+    <div class="mb-3">
+      <label for="valor">Valor</label>
+      <input type="text" id="valor" class="form-control" formControlName="valor" placeholder="Digite um valor">
+    </div>
+    <div class="mb-3">
+      <select class="form-select" name="moeda" id="moeda" formControlName="moedaescolhida1">Escolha a moeda:
+        <option *ngFor="let option of options" [value]="option.value">{{option.label}}</option>
+      </select>
+    </div>
+    <div class="setadiv mb-3">
+      <i class="fa-solid fa-right-left setas" (click)="changeOption()"></i>
+    </div>
+    <div class="mb-3">
+      <select class="form-select" name="moeda2" id="moeda" formControlName="moedaescolhida2">Escolha a moeda:
+        <option *ngFor="let option of options" [value]="option.value">{{option.label}}</option>
+      </select>
+    </div>
+    <div class="convertediv mb-4">
+      <input type="submit" value="Converter" class="btn btn-info">
+    </div>
+  </form>
+  <div class="col">
+    <label for="resultado">Resultado em R$: </label>
+    <input type="text" class="form-control" id="resultado" [value]="resultado" readonly>
+  </div>
+</div>

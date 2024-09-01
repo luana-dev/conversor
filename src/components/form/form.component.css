@@ -1,0 +1,36 @@
+.container {
+  width: 50%;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.convertediv {
+  display: flex;
+  justify-content: center;
+}
+
+.setadiv {
+  display: flex;
+  justify-content: center;
+}
+
+.setas {
+  font-size: 40px;
+  cursor: pointer;
+  color: blue;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.setas:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
